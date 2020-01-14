@@ -1,8 +1,9 @@
 import React from 'react';
+import Resentence from 'resentence';
 
 const ScoreHeader = (props) => {
   return (
-    <h2>Your Score: {props.score}</h2>
+    <Resentence align='center' className="score">{'Your score: ' + props.score}</Resentence>
   )
 }
 
