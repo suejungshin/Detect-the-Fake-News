@@ -1,22 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import List from './components/List.jsx';
+import Banner from './components/Banner.jsx';
+import CardsContainer from './components/CardsContainer.jsx';
+import ScoreHeader from './components/ScoreHeader.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      items: []
+    this.state = {
+      items: [],
+      score: 78,
     }
   }
 
   componentDidMount() {
     $.ajax({
-      url: '/items', 
+      url: '/items',
       success: (data) => {
         this.setState({
-          items: data
+          items: [data[0], data[1]],
         })
       },
       error: (err) => {
@@ -27,8 +30,10 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <h1>Item List</h1>
-      <List items={this.state.items}/>
+      <Banner></Banner>
+      <h1>Can you spot the fake news?</h1>
+      <ScoreHeader score={this.state.score}></ScoreHeader>
+      <CardsContainer items={this.state.items}/>
     </div>)
   }
 }

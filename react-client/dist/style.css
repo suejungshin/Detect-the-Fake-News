@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+  background-color: lightblue;
+  /* background-image: url('detective.jpg');
+  background-size: 800px 700px;
+  background-repeat: no-repeat; */
+  margin: 0px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background-color: purple;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.9em;
+  margin-right: auto;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.card-outline {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  background-clip: padding-box;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  height: 400px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: auto;
+}
