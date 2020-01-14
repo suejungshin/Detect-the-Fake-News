@@ -10,9 +10,7 @@ class Timer extends React.Component {
   }
 
   componentDidMount() {
-
     this.intervalId = setInterval(() => {
-
       if (this.props.expirationTime - Date.now() <= 0) {
         clearInterval(this.intervalId);
         this.props.onTimeExpired();
