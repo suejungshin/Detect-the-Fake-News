@@ -3,7 +3,7 @@ import Card from './Card.jsx';
 
 const CardsContainer = (props) => (
   <div className='cards-container'>
-    { props.items.map(item => <Card item={item}/>)}
+    { props.currentCards.map(article => <Card key={article._id} article={article} onCardClick={props.onCardClick}/>)}
   </div>
 )
 

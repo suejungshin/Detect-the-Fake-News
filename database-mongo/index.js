@@ -53,20 +53,19 @@ var findTrueCards = function(callback) {
   });
 };
 
-// var findTrueCards = function(callback) {
-//   Article.findOne({}, function(err, items) {
-//     if(err) {
-//       callback(err, null);
-//     } else {
-//       callback(null, items);
-//     }
-//   });
-// };
-
-const getNext = (callback) => {
-
+var findFalseCards = function(callback) {
+  Article.aggregate([
+    {$match: {fact_rating_phase1:'FALSE'}},
+    {$sample: {size: 10}}
+  ], function(err, items) {
+    if(err) {
+      callback(err, null);
+    } else {
+      callback(null, items);
+    }
+  });
 };
 
 
 module.exports.findTrueCards = findTrueCards;
-module.exports.getNext = getNext;
+module.exports.findFalseCards = findFalseCards;

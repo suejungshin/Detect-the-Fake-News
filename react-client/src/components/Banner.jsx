@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = (props) => (
   <div className='banner'>
-    <span className='logo'>FAKE-IT</span>
+    <span className='logo'>FAKE NEWS BATTLE</span>
   </div>
 )
 
