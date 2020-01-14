@@ -1,16 +1,18 @@
 body {
-  font-family: sans-serif;
-  background-color: lightblue;
+  font-family: 'Gelasio', serif;
+  background-color: #BFCCD6;
   /* background-image: url('detective.jpg');
   background-size: 800px 700px;
   background-repeat: no-repeat; */
   margin: 0px;
+  color: #10161A;
 }
 
 h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 h2 {
@@ -19,11 +21,16 @@ h2 {
   align-items: center;
 }
 
+h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
 .banner {
   display: flex;
   height: 40px;
   width: 100%;
-  background-color: purple;
+  background-color: #5C7080;
 }
 
 .logo {
@@ -40,28 +47,48 @@ h2 {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  overflow: hidden;
-}
-
-.card-outline {
-  display: flex;
-  border-radius: 10px;
-  overflow: hidden;
-  background-clip: padding-box;
 }
 
 .card {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   border-style: solid;
   border-radius: 10px;
   border-width: 2px;
   height: 400px;
-  margin: 10px;
-  padding: 10px;
+  margin: 20px;
   width: 300px;
-  background-color: white;
+  background-color: #EBF1F5;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  transition: transform 150ms;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card:hover:active .card-headline {
+  background-color: #BFCCD6;
+}
+
+.card:hover:active .card-description {
+  background-color: #D8E1E8;
+}
+
+.card-headline {
+  flex: 0;
+  background-color: #CED9E0;
+  border-width: 2px;
+  padding: 20px;
+  transition: background-color 150ms;
+}
+
+.card-description {
+  flex: 1;
+  padding: 20px;
   overflow: auto;
+  transition: background-color 150ms;
 }
