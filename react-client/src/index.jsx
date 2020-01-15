@@ -20,7 +20,7 @@ class App extends React.Component {
       score: 0,
       showModal: false,
     }
-    this.expirationTime = Date.now() + 20000;
+    this.expirationTime = Date.now() + 40000;
     this.onTimeExpired = this.onTimeExpired.bind(this);
     this.onCardClick = this.onCardClick.bind(this);
     this.updateCards = this.updateCards.bind(this);
@@ -110,7 +110,7 @@ class App extends React.Component {
   }
 
   restartGame() {
-    this.expirationTime = Date.now() + 20000;
+    this.expirationTime = Date.now() + 40000;
     this.setState({
       currentCards: [],
       trueCards: [],

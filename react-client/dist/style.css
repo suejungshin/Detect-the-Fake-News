@@ -189,6 +189,7 @@ button {
   margin-bottom: 40px;
   font-size: 14pt;
   font-family: 'Gelasio', serif;
+  cursor: pointer;
 }
 
 .answer-grid {
