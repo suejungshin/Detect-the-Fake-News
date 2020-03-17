@@ -36,7 +36,6 @@ class App extends React.Component {
     $.ajax({
       url: '/cards',
       success: (data) => {
-        console.log(data)
         this.setState({
           trueCards: data.true,
           falseCards: data.false
@@ -56,15 +55,11 @@ class App extends React.Component {
   }
 
   onCardClick(event) {
-    console.log(event.target.id)
-    console.log('I clicked a card!!')
     if (this.state.gameRoundNum < 10) {
       this.state.gameRoundNum++;
-      console.log('now we are on game round: ', this.state.gameRoundNum)
       if (event.target.id === 'TRUE') {
         this.state.score += 10;
         this.state.playerAnswers.push('correct');
-        console.log('I found the true news!')
       } else {
         this.state.playerAnswers.push('incorrect');
       }
@@ -75,7 +70,6 @@ class App extends React.Component {
         this.state.playerAnswers.push('correct');
         this.gameover();
       } else {
-        console.log('game over!! 10 rounds are up!')
         this.state.playerAnswers.push('incorrect');
         this.gameover();
       }
@@ -98,9 +92,7 @@ class App extends React.Component {
   }
 
   gameover() {
-    console.log('game over!')
     this.showModal();
-    console.log(this.state.showModal)
   }
 
   showModal() {
